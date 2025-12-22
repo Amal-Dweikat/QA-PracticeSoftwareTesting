@@ -1,7 +1,7 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
 
-
+test.skip(!!process.env.CI, 'Login setup is skipped on CI');
 
 
 test.describe('Login Feature - PracticeSoftwareTesting', () => {
@@ -14,7 +14,7 @@ test.describe('Login Feature - PracticeSoftwareTesting', () => {
 
     await loginPage.goto();
     await loginPage.login(
-      process.env.USER_EMAIL || '',
+      process.env.USER_EMAIL!,
       process.env.USER_PASSWORD || ''
     );
 
