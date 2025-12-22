@@ -20,7 +20,7 @@ export default defineConfig({
 
   use: {
     //**** *****/
-     baseURL: process.env.BASE_URL,
+     baseURL: process.env.BASE_URL || 'https://practicesoftwaretesting.com',
 
     trace: 'on-first-retry',
   },
