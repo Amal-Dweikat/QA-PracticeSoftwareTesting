@@ -10,7 +10,7 @@ test.describe('Price Range Filter', () => {
   });
 
   test('TS-1: move price range -> products are filtered', async () => {
-    await pageObj.moveSlider(50, 50); // خليها offsets أكبر شوي عشان يتغير فعليًا
+    await pageObj.moveSlider(50, 50); 
     const prices = await pageObj.getPrices();
     expect(prices.length).toBeGreaterThan(0);
   });
@@ -21,7 +21,7 @@ test.describe('Price Range Filter', () => {
     await pageObj.moveSlider(80, 80);
     const after = (await pageObj.getPrices()).length;
 
-    // ✅ لازم بعد ما نضيّق النطاق عدد المنتجات ما يزيد
+    
     expect(after).toBeLessThanOrEqual(before);
   });
 

@@ -3,7 +3,7 @@ import { Page, Locator, expect } from '@playwright/test';
 export class RemoveFromCartPage {
   readonly page: Page;
 
-  // عناصر صفحة checkout
+ 
   readonly qtyInputs: Locator;
   readonly removeButtons: Locator;
   readonly toastContainer: Locator;
@@ -11,13 +11,13 @@ export class RemoveFromCartPage {
   constructor(page: Page) {
     this.page = page;
 
-    // كل عنصر في السلة له input quantity
+   
     this.qtyInputs = page.locator('[data-test="product-quantity"]');
 
-    // زر الحذف (a.btn.btn-danger) لكل سطر
+   
     this.removeButtons = page.locator('a.btn.btn-danger');
 
-    // مكان رسائل التوست
+   
     this.toastContainer = page.locator('#toast-container');
   }
 
@@ -37,10 +37,10 @@ export class RemoveFromCartPage {
   }
 
   async removeAllItems() {
-    // احذف لحد ما السلة تصير فاضية
+   
     while (await this.itemsCount() > 0) {
       await this.removeFirstItem();
-      // استني شوي عشان الواجهة تحدث
+     
       await this.page.waitForTimeout(500);
     }
   }
