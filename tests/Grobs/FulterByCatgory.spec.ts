@@ -9,7 +9,7 @@ test.describe('Filters By Category', () => {
     await categoryPage.goto();
   });
 
-  test('TC-1: Filter by Category "Hand Tools"', async () => {
+  test('TS-1: Filter by Category "Hand Tools"', async () => {
     await categoryPage.filterByCategory('category-01KD3KG5XB3S64FWT2TYWVYM00');
     const products = await categoryPage.getProductsByCategory('Hand Tools');
     for (const product of products) {
@@ -17,7 +17,7 @@ test.describe('Filters By Category', () => {
     }
   });
 
-  test('TC-2: Filter by Category "Power Tools"', async () => {
+  test('TS-2: Filter by Category "Power Tools"', async () => {
     await categoryPage.filterByCategory('category-01KD3KG5XB3S64FWT2TYWVYM01');
     const products = await categoryPage.getProductsByCategory('Power Tools');
     for (const product of products) {
