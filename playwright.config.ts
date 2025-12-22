@@ -52,14 +52,14 @@ export default defineConfig({
     ...(hasLoginState ? { storageState: 'login.json' } : {}),
   },
 },
-// {
-//   name: 'webkit',
-//   dependencies: ['login'],
-//   use: {
-//     ...devices['Desktop Safari'],
-//     ...(hasLoginState ? { storageState: 'login.json' } : {}),
-//   },
-// },
+{
+  name: 'webkit',
+  dependencies: ['login'],
+  use: {
+    ...devices['Desktop Safari'],
+    ...(hasLoginState ? { storageState: 'login.json' } : {}),
+  },
+},
 
 ],
 
