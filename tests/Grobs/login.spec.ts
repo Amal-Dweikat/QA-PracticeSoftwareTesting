@@ -1,7 +1,8 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../Pages/LoginPage';
+import { LoginPage } from '../pages/LoginPage';
 
-test.skip(!!process.env.CI, 'Login setup is skipped on CI');
+
+
 
 
 test.describe('Login Feature - PracticeSoftwareTesting', () => {
