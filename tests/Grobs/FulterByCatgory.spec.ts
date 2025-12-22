@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { CategoryPage } from '../../../tests/Pages/FulterByCatgory.ts';
+import { CategoryPage } from '../Pages/FulterByCatgory.ts';
 
 test.describe('Filters By Category', () => {
   let categoryPage: CategoryPage;

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { ProductsPage } from '../../../tests/Pages/SortedPage.ts';
+import { ProductsPage } from '../Pages/SortedPage.ts';
 
 test.describe('Sort Feature (from A-Z and Price from High to Low) ', () => {
   let productsPage: ProductsPage;
