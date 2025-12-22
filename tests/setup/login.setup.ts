@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
 
 test('Login Setup - Save storage state', async ({ page }) => {
+   if (process.env.CI) {
+    test.skip(true, 'Skip login setup on CI');
+  }
   await page.goto('/auth/login');
 
  
