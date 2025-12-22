@@ -1,9 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 test('Login Setup - Save storage state', async ({ page }) => {
-   if (process.env.CI) {
-    test.skip(true, 'Skip login setup on CI');
-  }
+  const emailValue = process.env.USER_EMAIL;
+const passValue = process.env.USER_PASSWORD;
+
+test.skip(!emailValue || !passValue, 'Missing USER_EMAIL/USER_PASSWORD (skip login setup)');
+
   await page.goto('/auth/login');
 
  
@@ -18,8 +20,9 @@ test('Login Setup - Save storage state', async ({ page }) => {
   await expect(password).toBeVisible();
   await expect(loginBtn).toBeVisible();
 
-  await email.fill(process.env.USER_EMAIL || '');
-  await password.fill(process.env.USER_PASSWORD || '');
+  await email.fill(emailValue!);
+await password.fill(passValue!);
+
   await loginBtn.click();
 
   await expect(page).not.toHaveURL(/\/auth\/login/);

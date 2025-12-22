@@ -1,7 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 ///******** */
+import fs from 'fs';
 import * as dotenv from 'dotenv';
 dotenv.config();
+const hasLoginState = fs.existsSync('login.json');
 
 
 
@@ -35,20 +37,30 @@ export default defineConfig({
 },
 
   {
-    name: 'chromium',
-    dependencies: ['login'],
-    use: { ...devices['Desktop Chrome'], storageState: 'login.json' },
+  name: 'chromium',
+  dependencies: ['login'],
+  use: {
+    ...devices['Desktop Chrome'],
+    ...(hasLoginState ? { storageState: 'login.json' } : {}),
   },
-  {
-    name: 'firefox',
-    dependencies: ['login'],
-    use: { ...devices['Desktop Firefox'], storageState: 'login.json' },
+},
+{
+  name: 'firefox',
+  dependencies: ['login'],
+  use: {
+    ...devices['Desktop Firefox'],
+    ...(hasLoginState ? { storageState: 'login.json' } : {}),
   },
-  {
-    name: 'webkit',
-    dependencies: ['login'],
-    use: { ...devices['Desktop Safari'], storageState: 'login.json' },
+},
+{
+  name: 'webkit',
+  dependencies: ['login'],
+  use: {
+    ...devices['Desktop Safari'],
+    ...(hasLoginState ? { storageState: 'login.json' } : {}),
   },
+},
+
 ],
 
 
