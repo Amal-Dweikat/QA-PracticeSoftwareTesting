@@ -1,4 +1,4 @@
-#Automated Testing Framework for Practice Software Testing Site
+# Automated Testing Framework for Practice Software Testing Site
 TypeScript Playwright Browsers Project Overview
 
 This repository contains our collaborative end-to-end testing framework developed in Playwright and TypeScript for the website practicesoftwaretesting.com. Amal Dweikat and I worked together to build a robust testing suite that verifies key e-commerce functionalities, ensuring reliability and coverage of essential user flows.
