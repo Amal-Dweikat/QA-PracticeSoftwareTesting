@@ -1,22 +1,53 @@
-# Automated Testing Framework for Practice Software Testing Site
-TypeScript Playwright Browsers Project Overview
+# Automated Testing Framework – Playwright & TypeScript
 
-This repository contains our collaborative end-to-end testing framework developed in Playwright and TypeScript for the website practicesoftwaretesting.com. Amal Dweikat and I worked together to build a robust testing suite that verifies key e-commerce functionalities, ensuring reliability and coverage of essential user flows.
+## 📌 Overview
+This project is an end-to-end testing framework built using Playwright and TypeScript for an e-commerce website (practicesoftwaretesting.com).
 
-We focused on minimum required test cases for features like registration, login, cart management, sorting, filtering by price range/category/brand, and search. The project incorporates advanced Playwright concepts to create a maintainable, scalable automation setup tested across multiple browsers.
+It was developed collaboratively to validate core user flows and ensure system reliability across multiple browsers.
 
-Key Features Tested
+---
 
-Register: User account creation with validation Login: Authentication and session management Add to Cart: Adding products with quantity checks Remove from Cart: Removing items and updating totals Sort Feature: Sorting products A-Z and price high-to-low Price Range: Filtering by price sliders or inputs By Category: Category-based product filtering Search: Keyword search with result verification By Brand: Brand-specific filtering
+## 🚀 Key Features Tested
+- User registration & validation  
+- Login & authentication  
+- Add/remove items from cart  
+- Product sorting (A-Z, price)  
+- Filtering (price, category, brand)  
+- Search functionality  
 
-Each feature has dedicated test files, covering happy paths, edge cases, and errors. Technologies & Concepts Used
+Each feature includes test cases for happy paths, edge cases, and error handling.
 
-Language: TypeScript Framework: Playwright for E2E testing Browsers: Chromium and Firefox (configurable for more) Playwright Features: Hooks (beforeAll, beforeEach, etc.) for setup/teardown Page Object Models (POM) for reusable locators and actions Parameterized tests via .env files (e.g., credentials, URLs) Grouping with test.describe for organized scenarios Shared authentication state to avoid repeated logins Multi-browser testing with projects in config
+---
 
-Other: dotenv for environment variables, async/await for clean async handling
+## 🛠️ Technologies Used
+- TypeScript  
+- Playwright (E2E Testing)  
+- Multi-browser testing (Chromium, Firefox)  
+- dotenv for environment configuration  
 
-What We Learned
+---
 
-Building efficient E2E tests with Playwright's powerful API Implementing POM for better maintainability and reusability Managing test data and environments with .env and fixtures Cross-browser testing to ensure consistent behavior Optimizing test runs by reusing authentication states Collaborative development: Dividing features, code reviews, and merging contributions
+## 🧠 Testing Concepts Applied
+- Page Object Model (POM) for reusable structure  
+- Hooks (`beforeEach`, `beforeAll`) for setup  
+- Parameterized tests using `.env`  
+- Test grouping with `test.describe`  
+- Shared authentication state for optimization  
 
-Developed by: Fathi Heelo and Amal Dweikat 🚀 License: MIT - Feel free to fork, explore, and contribute!
+---
+
+## 📚 What I Learned
+- Building scalable E2E test frameworks  
+- Writing maintainable tests using POM  
+- Managing environments and test data  
+- Ensuring cross-browser compatibility  
+- Collaborating on testing projects (code reviews, task distribution)  
+
+---
+
+## 👨‍💻 Authors
+Developed by:  
+**Fathi Heelo** 🚀  
+**Amal Dweikat**
+
+---
